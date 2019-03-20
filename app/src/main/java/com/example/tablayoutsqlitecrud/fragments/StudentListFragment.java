@@ -24,15 +24,10 @@ public class StudentListFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.student_list_fragment, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
-        final RecyclerViewAdapter adapter = new RecyclerViewAdapter();
+        final RecyclerViewAdapter adapter = new RecyclerViewAdapter(getContext());
+        Store.getStore().recyclerViewAdapter = adapter;
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        Store.addSubscription(TAG, new Runnable() {
-            @Override
-            public void run() {
-                adapter.notifyDataSetChanged();
-            }
-        });
         return view;
     }
 

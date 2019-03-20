@@ -3,13 +3,11 @@ package com.example.tablayoutsqlitecrud.adapters;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.util.Log;
 
 import com.example.tablayoutsqlitecrud.Store;
-import com.example.tablayoutsqlitecrud.fragments.StudentCreateFragment;
 import com.example.tablayoutsqlitecrud.fragments.StudentDetailFragment;
-import com.example.tablayoutsqlitecrud.fragments.StudentEditFragment;
 import com.example.tablayoutsqlitecrud.fragments.StudentListFragment;
+import com.example.tablayoutsqlitecrud.fragments.StudentModifyFragment;
 
 /**
  * Fragment to return the clicked tab.
@@ -21,29 +19,23 @@ public class TabPagerAdapter extends FragmentStatePagerAdapter {
 
     private StudentListFragment studentListFragment;
     private StudentDetailFragment studentDetailFragment;
-    private StudentCreateFragment studentCreateFragment;
-    private StudentEditFragment studentEditFragment;
+    private StudentModifyFragment studentModifyFragment;
+    public String tab3Title = "Create";
 
     public TabPagerAdapter(FragmentManager fm) {
         super(fm);
         studentListFragment = new StudentListFragment();
         studentDetailFragment = new StudentDetailFragment();
-        studentCreateFragment = new StudentCreateFragment();
-        studentEditFragment = new StudentEditFragment();
-        Store.addSubscription(TAG, new Runnable() {
-            @Override
-            public void run() {
-                notifyDataSetChanged();
-            }
-        });
+        studentModifyFragment = new StudentModifyFragment();
+        Store.getStore().detailFragment = studentDetailFragment;
+        Store.getStore().modifyFragment = studentModifyFragment;
     }
 
     @Override
     public Fragment getItem(int position) {
         if (position == 0) return studentListFragment;
         else if (position == 1) return studentDetailFragment;
-        else if (position == 2 && Store.editSelectedStudentIndex != null) return studentEditFragment;
-        else if (position == 2) return studentCreateFragment;
+        else if (position == 2) return studentModifyFragment;
         return null;
     }
 
@@ -51,8 +43,7 @@ public class TabPagerAdapter extends FragmentStatePagerAdapter {
     public CharSequence getPageTitle(int position){
         if (position == 0) return "View All";
         else if (position == 1) return "Detail";
-        else if (position == 2 && Store.editSelectedStudentIndex != null) return "Edit";
-        else if (position == 2) return "Create";
+        else if (position == 2) return tab3Title;
         return null;
     }
 
