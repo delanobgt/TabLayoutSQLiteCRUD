@@ -19,47 +19,80 @@ limitations under the License. -->
     android:orientation="vertical"
     android:padding="20dp">
 
-    <EditText
-        android:id="@+id/ro_id"
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="ID"
-        android:focusable="false" />
-    <EditText
-        android:id="@+id/ro_fullname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Fullname"
-        android:focusable="false" />
-    <EditText
-        android:id="@+id/ro_birthdate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Birthdate"
-        android:focusable="false" />
-    <EditText
-        android:id="@+id/ro_gender"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Gender"
-        android:focusable="false" />
-    <EditText
-        android:id="@+id/ro_telephone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Telephone"
-        android:focusable="false" />
-    <EditText
-        android:id="@+id/ro_country"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Country"
-        android:focusable="false" />
-    <EditText
-        android:id="@+id/ro_city"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="City"
-        android:focusable="false" />
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/ro_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID"
+            android:focusable="false" />
+    </android.support.design.widget.TextInputLayout>
 
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/ro_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fullname"
+            android:focusable="false" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/ro_birthdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Birthdate"
+            android:focusable="false" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/ro_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Gender"
+            android:focusable="false" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/ro_telephone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Telephone"
+            android:focusable="false" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/ro_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Country"
+            android:focusable="false" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/ro_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="City"
+            android:focusable="false" />
+    </android.support.design.widget.TextInputLayout>
 </LinearLayout>

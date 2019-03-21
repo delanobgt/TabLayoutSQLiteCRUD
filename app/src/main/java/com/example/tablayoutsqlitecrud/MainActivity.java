@@ -26,9 +26,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-
-            }
+            public void onTabSelected(TabLayout.Tab tab) { }
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
                 if (tab.getPosition() == 1) {
@@ -36,9 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
             @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
+            public void onTabReselected(TabLayout.Tab tab) { }
         });
         tabLayout.getTabAt(0).select();
 

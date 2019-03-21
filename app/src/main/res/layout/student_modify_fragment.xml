@@ -19,31 +19,45 @@ limitations under the License. -->
     android:orientation="vertical"
     android:padding="20dp">
 
-    <EditText
-        android:id="@+id/ed_id"
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="ID"
-        android:focusable="false" />
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/ed_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID"
+            android:focusable="false" />
+    </android.support.design.widget.TextInputLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="2" >
-        <EditText
-            android:id="@+id/ed_fullname"
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Fullname" />
-        <EditText
-            android:id="@+id/ed_birthdate"
+            android:layout_weight="1">
+            <EditText
+                android:id="@+id/ed_fullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fullname" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:focusable="false"
-            android:hint="Birthdate" />
+            android:layout_weight="1">
+            <EditText
+                android:id="@+id/ed_birthdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="Birthdate" />
+        </android.support.design.widget.TextInputLayout>
     </LinearLayout>
 
     <TextView
@@ -56,29 +70,45 @@ limitations under the License. -->
         android:entries="@array/genders"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    <EditText
-        android:id="@+id/ed_telephone"
+
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Telephone" />
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/ed_telephone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Telephone" />
+    </android.support.design.widget.TextInputLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="2" >
-        <EditText
-            android:id="@+id/ed_country"
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Country" />
-        <EditText
-            android:id="@+id/ed_city"
+            android:layout_weight="1">
+            <EditText
+                android:id="@+id/ed_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Country" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="City" />
+            android:layout_weight="1">
+            <EditText
+                android:id="@+id/ed_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="City" />
+        </android.support.design.widget.TextInputLayout>
     </LinearLayout>
 
     <Button
