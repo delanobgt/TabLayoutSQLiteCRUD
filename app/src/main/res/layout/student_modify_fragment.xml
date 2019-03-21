@@ -25,17 +25,27 @@ limitations under the License. -->
         android:layout_height="wrap_content"
         android:hint="ID"
         android:focusable="false" />
-    <EditText
-        android:id="@+id/ed_fullname"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Fullname" />
-    <EditText
-        android:id="@+id/ed_birthdate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:focusable="false"
-        android:hint="Birthdate" />
+        android:orientation="horizontal"
+        android:weightSum="2" >
+        <EditText
+            android:id="@+id/ed_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Fullname" />
+        <EditText
+            android:id="@+id/ed_birthdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:hint="Birthdate" />
+    </LinearLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,16 +61,25 @@ limitations under the License. -->
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Telephone" />
-    <EditText
-        android:id="@+id/ed_country"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Country" />
-    <EditText
-        android:id="@+id/ed_city"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="City" />
+        android:orientation="horizontal"
+        android:weightSum="2" >
+        <EditText
+            android:id="@+id/ed_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Country" />
+        <EditText
+            android:id="@+id/ed_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="City" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_create"
